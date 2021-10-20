@@ -1,0 +1,67 @@
+
+
+
+<div class="bg">
+    <!-- <h1 class="text-dark d-flex  justify-content-center m-4">Login</h1> -->
+    <div class="spacer"></div>
+    <div  style="height: 350px">
+    
+     <div class=" loginBox">
+       <div class="row d-flex justify-content-center m-3">
+         <!-- <table>
+         <td>
+             <br><br>
+         <div class="col-md-4 col-sm-2">
+           <h4>SignUp</h4>
+         </div></td>
+         <td>
+         <div class="col-md-4 col-sm-2">
+         
+        </div></td>
+      </table> -->
+        <!-- <div class="col-md-4 col-sm-2">
+          <a  [ngClass] = "active == 3 ? 'text-dark fw-bold linkText linkTextActive' : 'text-dark fw-bold linkText'" (click) = "changeAuthBloodBank()">BLOODBANK</a>
+        </div> -->
+       </div>
+       <form class="signup-form" action="/register" method="post">
+        <form class="signup-form" action="/register" method="post">
+            <!-- form header -->
+<div class="form-header">
+    <h1>New SignUp</h1>
+</div>
+            <!-- form body -->
+            <div class="form-body">
+                <!-- Firstname and Lastname -->
+                <div class="horizontal-group">
+                    <div class="form-group left">
+                        <label for="firstname" class="label-title">Name *</label>
+                        <input  [(ngModel)] = "customerName" (change) = "onCustomerNameValueChanged($event)" type="text" name="customerName" placeholder="Enter full name" class="form-control">
+                    </div>
+                    <div class="form-group right">
+                        <label for="lastname" class="label-title">DOB *</label>
+                        <input  [(ngModel)] = "dob" (change) = "onCityValueChanged($event)" type="text" name="dob" placeholder="Enter DOB in YYYY-MM-DD" class="form-control">
+                    </div>
+                    <div class="form-group right">
+                        <label for="lastname" class="label-title">ContactNo *</label>
+                        <input  [(ngModel)] = "contactNo" (change) = "onGraValueChanged($event)" type="text" name="contactNo" placeholder="Enter Contact Number" class="form-control">
+                    </div>
+                    <div class="form-group right">
+                        <label for="lastname" class="label-title">Email *</label>
+                        <input  [(ngModel)] = "email" (change) = "onGradeValueChanged($event)" type="text" name="email" placeholder="Enter e-mail" class="form-control">
+                    </div>
+                    <div class="form-group right">
+                        <label for="lastname" class="label-title">Address *</label>
+                        <input  [(ngModel)] = "address" (change) = "onGrValueChanged($event)" type="text" name="address" placeholder="Enter address" class="form-control">
+                    </div>
+                        <div class="form-group left">
+                            <label for="password" class="label-title">Password *</label>
+                            <input  [(ngModel)] = "password" (change) = "onGradValueChanged($event)" type="text" name="password" placeholder="Enter password" class="form-control">
+                    </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="myFunction()" (click) = "InsertBookingDetails()" >Add</button>
+                    </div>
+                    </form>
+      </form>
+     </div>
+    </div>
+    </div>  

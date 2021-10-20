@@ -1,0 +1,43 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div class="main-div">
+     <div   scope = "row" *ngFor = "let items of vehicleDetails" style="width: 40%;">
+        <img src = {{items.VehicleImage}} >
+      <h1>VehicleID:{{items.VehicleId}}</h1>
+      <h1>VehicleName:{{items.VehicleName}}</h1>
+      <h1>VehiclePrice:{{items.VehiclePrice}}</h1>
+      <h1>Type:{{ items.VehicleType}}</h1>
+      <h1>Availability:{{items.VehicleAvailability}}</h1>
+      <button routerLink="/User/ManualBooking" routerLinkActive = "activeClass" class="btn btn-danger">Book</button>
+
+   
+
+    </div>
+    </div>
+  </body>
+</html> -->
+
+<section style=" padding-top:3em;">
+  <div class="container ">
+    <div class="col-md-12 product-list" id="product-side">
+  <div  class=" row">
+             
+    <div  *ngFor = "let items of vehicleDetails" class="col-md-6 col-sm-8 col-xs-12 product-card">
+      <img src = {{items.VehicleImage}} >
+      <h4>VehicleID:{{items.VehicleId}}</h4>
+      <h4>VehicleName:{{items.VehicleName}}</h4>
+      <h4>VehiclePrice:{{items.VehiclePrice}}</h4>
+      <h4>Type:{{ items.VehicleType}}</h4>
+      <!-- <h1>Availability:{{items.VehicleAvailability}}</h1> -->
+      <button [routerLink]="['/User/ManualBookingUser',items.VehicleId]" routerLinkActive = "activeClass" class="btn btn-danger">Book</button>
+             
+      <!-- routerLink="/User/ManualBooking" -->
+      </div>
+   </div>
+  </div>
+    </div>
+ 
+</section>

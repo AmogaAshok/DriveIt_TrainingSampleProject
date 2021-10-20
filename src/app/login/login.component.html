@@ -1,0 +1,81 @@
+<!-- <!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>LogIn  Page</title>
+   
+</head>
+
+<body background="assets\img\bg.jpeg">
+    
+ 
+      <div class="box">
+      <div class="page">
+            <div class="header">
+                <a id="login" class="active" href="#login" >login</a>
+            </div>
+            <div id="errorMsg"></div>
+            <div class="content">
+                <form class="login" name="loginForm" onsubmit="" method="">
+                    <input type="text" name="name" id="logName" placeholder="Username">
+                    <input type="password" name="password" id="logPassword" placeholder="Password">
+                    <div id="check">
+                   
+                    </div>
+                    <br><br>
+                    <input type="submit" routerLinkActive = "active" routerLink="/Car" value="Login">
+                    <a href="#">Forgot Password?</a>
+                </form> -->
+
+                <div class="bg">
+                  <!-- <h1 class="text-dark d-flex  justify-content-center m-4">Login</h1> -->
+                  <div class="spacer"></div>
+                  <div class="d-flex align-items-center justify-content-center" style="height: 350px">
+                  
+                   <div class=" loginBox">
+                     <div class="row d-flex justify-content-center m-3">
+                       <table>
+                       <td>
+                       <div class="col-md-4 col-sm-2">
+                         <a  [ngClass] = "active == 1 ? 'text-dark fw-bold linkText linkTextActive' : 'text-dark fw-bold linkText'" (click) = "changeAuthAdmin()">ADMIN</a>
+                       </div></td>
+                       <td>
+                       <div class="col-md-4 col-sm-2">
+                        <a  [ngClass] = "active == 2 ? 'text-dark fw-bold linkText linkTextActive' : 'text-dark fw-bold linkText'" (click) = "changeAuthUser()">USER</a>
+                      </div></td>
+                    </table>
+                      <!-- <div class="col-md-4 col-sm-2">
+                        <a  [ngClass] = "active == 3 ? 'text-dark fw-bold linkText linkTextActive' : 'text-dark fw-bold linkText'" (click) = "changeAuthBloodBank()">BLOODBANK</a>
+                      </div> -->
+                     </div>
+                     <form [formGroup] = "loginForm" (ngSubmit) = "onSubmit(loginForm.value)" class="form-group">
+                     <div class="row justify-content-center d-flex  p-2">
+                         <div class="col-md-10">
+                           <input type="text" placeholder="Username" class="form-control textBox" formControlName = "username" [ngClass]="{ 'is-invalid': submitted && form.username.errors }" >
+                           <div *ngIf="submitted && form.username.errors" class="invalid-feedback">
+                            <div *ngIf="form.username.errors.required" class="text-warning">Username  is required</div>
+                        </div>
+                          </div>
+                     </div>
+                     <div class="row justify-content-center d-flex p-2">
+                      <div class="col-md-10">
+                        <input type="password" placeholder="Password" class="form-control textBox" formControlName = "password" [ngClass]="{ 'is-invalid': submitted && form.password.errors }">
+                        <div *ngIf="submitted && form.password.errors" class="invalid-feedback">
+                          <div *ngIf="form.password.errors.required" class="text-warning">Password  is required</div>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="row justify-content-center d-flex m-4">
+                    <div class="col-md-4">
+                     <input type="submit" value="Login" class="btn btn-primary textButton">
+                    </div>
+                    <div class="d-grid">
+                      <a class="btn btn-google btn-login text-uppercase fw-bold" routerLink = "/Register">
+                        Don't Have an Account Yet ? Register
+                      </a>
+                    </div>
+                  </div>
+                    </form>
+                   </div>
+                  </div>
+                  </div>              

@@ -1,0 +1,111 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html >
+
+
+<div class=" container col-md-6 col-sm-4" >
+<label style="color: white;">Booking ID</label>
+<input  [(ngModel)] = "bookingId" (change) = "onCustomerIdValueChanged($event)" type="text" name="bookingId" id="" class="form-control">
+<label style="color: white;">Customer ID</label>
+<input  [(ngModel)] = "customerId" (change) = "onCustomerNameValueChanged($event)" type="text" name="customerId" id="" class="form-control">
+<label style="color: white;">Vehicle ID</label>
+<input [(ngModel)] = "vehicleId" (change) = "onCityValueChanged($event)" type="text" name="vehicleId" id="" class="form-control">
+<label style="color: white;">Booking Date</label>
+<input  [(ngModel)] = "bookingDate" (change) = "onGradeValueChanged($event)" type="text" name="bookingDate" id="" class="form-control"> 
+<br>
+<button class="btn btn-primary"  (click) = "InsertBookingDetails()" >Add</button> &nbsp;
+</div>
+
+
+
+<table class="center" > 
+  <table class="table" style="background-color: rgb(236, 236, 236);">
+
+    <tbody>
+        <tr scope = "row" *ngFor = "let items of bookingDetails">
+            <td>{{ items.BookingId }}</td>
+            <td>{{ items.CustomerId }}</td> 
+            <td>{{ items.VehicleId }}</td>
+            <td>{{ items.BookingDate }}</td>&nbsp;
+
+     </tr>
+    </tbody>
+  </table>
+
+</table>
+
+</html> -->
+<div class="bg">
+<h1>Booking Details</h1>
+
+<table id="customers" >
+  <tr>
+    <th>BookingId</th>
+    <th>CustomerId</th>
+    <th>VehicleId</th>
+    <th>BookingDate</th>
+    <!-- <th>Update Booking</th> -->
+    <th>Delete Booking</th>
+  </tr>
+     <tr *ngFor = "let items of bookingDetails">
+      <td>{{ items.BookingId }}</td>
+      <td>{{ items.CustomerId }}</td> 
+      <td>{{ items.VehicleId }}</td>
+      <td>{{ items.BookingDate }}</td>
+     <!-- <td><button (click) = "UpdateBookingDetails(bookingDetail)"  class="btn btn-secondary" >Update</button></td> -->
+     <td><button (click) = "DeleteBookingDetails(items.BookingId)"  class="btn btn-danger">Delete</button></td>
+  </tr>
+</table>
+</div>
+<br><br><br><br><br><br><br>
+<!-- <div class="col-md-6">
+  <label>Customer ID</label>
+  <input  [(ngModel)] = "customerId" (change) = "onCustomerIdValueChanged($event)"  type="text" name="customerId" id="" class="form-control">
+  <label>Customer Name</label>
+  <input  [(ngModel)] = "customerName" (change) = "onCustomerNameValueChanged($event)" type="text" name="customerName" id="" class="form-control">
+  <label>DOB</label>
+  <input   [(ngModel)] = "dob" (change) = "onDOBValueChanged($event)" type="text" name="DOB" id="" class="form-control">
+  <label>PhoneNo</label>
+  <input  [(ngModel)] = "phoneNo" (change) = "onPhoneNoValueChanged($event)" type="text" name="PhoneNo" id="" class="form-control">
+  <label>Email</label>
+  <input [(ngModel)] = "email" (change) = "onEmailValueChanged($event)" type="text" name="Email" id="" class="form-control">
+  <label>Address</label>
+  <input [(ngModel)] = "address" (change) = "onAddressValueChanged($event)" type="text" name="Address" id="" class="form-control">
+  <br>
+  <button [disabled] = "isDisabledAdd" class="btn btn-primary" (click) = "InsertCustomerData()">Add Customer</button> &nbsp;
+  <button [disabled] = "isDisabledUpdate" (click) = "UpdateCustomerDetails(customerDetail)" class="btn btn-warning">Update Customer</button>
+</div> -->

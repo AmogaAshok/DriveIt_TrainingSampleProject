@@ -1,0 +1,29 @@
+<header class="site-header">
+    <div class="site-identity">
+      <a><img src="assets\img\124865014_409600350477348_2165117664859128003_n.jpg" alt="Site Name" /></a>
+      <h1><a routerLinkActive = "active" routerLink="/Index" href="#">DriveIt</a></h1>
+    </div>  
+    <nav class="site-navigation">
+      <ul >
+        <li class="nav-item dropdown" *ngIf = "UserLoggedIn; else loginBlock">
+           
+          <ul>
+            <li *ngIf = "getRole == 'User'"><a class="dropdown-item" routerLink = "/Index"></a></li>
+            <li><a  (click) = "logout()">Logout</a></li>
+            <li> {{ getRole }}</li>
+          </ul>
+        </li>
+        <ng-template #loginBlock>
+        <li><a routerLinkActive = "active" routerLink="/Login">Login</a>
+        <li><a routerLinkActive = "active" routerLink="/Register">Register</a>
+        </ng-template>
+          
+        <!-- <li><a routerLinkActive = "active" routerLink="/MyBooking">My Bookings</a></li>  -->
+        <li><a routerLinkActive = "active" routerLink="/ContactUs">ContactUs</a></li> 
+        
+        
+        </ul>
+    </nav>
+  </header>
+  <!-- <router-outlet></router-outlet> -->
+ 

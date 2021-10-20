@@ -1,0 +1,48 @@
+<h2 class="">Vehicle Details</h2>
+
+<table  id="customers">
+<thead>
+ <tr>
+   <th scope="col">Vehicle ID</th>
+   <th scope="col">Vehicle Name</th>
+   <th scope="col">Vehicle Type</th>
+   <th scope="col">Vehicle Price</th>
+   <!-- <th scope="col">Vehicle Image</th> -->
+   <th scope="col">Vehicle Availability</th>
+  <th scope="col">Update Vehicle</th>
+    <!-- <th scope="col">View Vehicle</th> -->
+   <th scope="col">Delete Vehicle</th>
+ </tr>
+</thead>
+<tbody>
+   <tr scope = "row" *ngFor = "let items of vehicleDetails">
+       <td>{{ items.VehicleId }}</td>
+       <td>{{ items.VehicleName }}</td>
+       <td>{{ items.VehicleType }}</td>
+       <td>{{ items.VehiclePrice }}</td>
+       <!-- <td>{{ items.VehicleImage }}</td> -->
+       <td>{{ items.VehicleAvailability }}</td>
+       <td><button (click) = "GetVehicleDetailsById(items.VehicleId)" class="btn btn-primary">Update</button></td>
+       <!-- <td><button (click)="ViewVehicle(items.VehicleId)" type="button" class="btn btn-warning">View</button></td> -->
+       <td><button (click) = "DeleteVehicleDetails(items.VehicleId)" class="btn btn-danger">Delete</button></td>
+   </tr>
+</tbody>
+</table>
+<div class=" container col-md-6 col-sm-4">
+ 
+<label>Vehicle Id</label>
+<input  [(ngModel)] = "vehicleId" (change) = "onVehicleIdValueChanged($event)"  type="text" name="vehicleId" id="" class="form-control">
+<label>Vehicle  Name</label>
+<input [(ngModel)] = "vehicleName" (change) = "onVehicleNameValueChanged($event)" type="text" name="vehicleName" id="" class="form-control">
+<label>Vehicle Type</label>
+<input   [(ngModel)] = "vehicleType" (change) = "onVehicleTypeValueChanged($event)" type="text" name="vehicleType" id="" class="form-control">
+<br><label>Vehicle Price</label>
+<input  [(ngModel)] = "vehiclePrice" (change) = "onVehiclePriceValueChanged($event)" type="text" name="vehiclePrice" id="" class="form-control">
+<label>Vehicle Image</label>
+<input   [(ngModel)] = "vehicleImage" (change) = "onVehicleImageValueChanged($event)" type="text" name="vehicleImage" id="" class="form-control">
+<br><label>Vehicle Availability</label>
+<input   [(ngModel)] = "vehicleAvailability" (change) = "onVehicleAvailabilityValueChanged($event)" type="text" name="vehicleAvailability" id="" class="form-control">
+<br>
+<button   class="btn btn-primary" (click) = "InsertVehicleData()">Add Vehicle</button> &nbsp;
+<button (click) = "UpdateVehicleDetails(vehicleDetail)" class="btn btn-warning">Update Vehicle</button>
+</div>

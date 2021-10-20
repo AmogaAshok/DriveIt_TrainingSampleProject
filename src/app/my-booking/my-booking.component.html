@@ -1,0 +1,18 @@
+
+
+<h1>My Bookings</h1>
+
+<table id="customers" >
+  <tr>
+    <th>BookingId</th>
+    <th>VehicleId</th>
+    <th>BookingDate</th>
+    <th>Delete Booking</th>
+  </tr>
+     <tr *ngFor = "let items of bookingDetails">
+      <td>{{ items.BookingId }}</td>
+      <td>{{ items.VehicleId }}</td>
+      <td>{{ items.BookingDate }}</td>
+     <td><button (click) = "DeleteBookingDetails(items.BookingId)" class="btn btn-danger">Delete</button></td>
+  </tr>
+</table>

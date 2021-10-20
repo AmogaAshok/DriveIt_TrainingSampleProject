@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html style="width: 1366px;height: 720px;">
+<body background="assets\backgroundcarbike.jpg"> 
+<table class="center" > 
+
+   
+<div >
+  <h1>CUSTOMER DETAILS</h1>
+
+<table id="customers">
+  <tr>
+    <th>Customer Id</th>
+    <th>Customer Name</th>
+    <th>DOB</th>
+    <th>Address</th>
+    
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Chris habibi</td>
+    <td>20 jan 1998</td>
+    <td>Cecilia Chapman
+        711-2880 Nulla St.
+        Mankato Mississippi 96522
+        (257) 563-7401</td>
+    
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Reo Helel</td>
+    <td>20 jan 1998</td>
+    <td>Iris Watson
+        P.O. Box 283 8562 Fusce Rd.
+        Frederick Nebraska 20620
+        (372) 587-2335</td>
+    
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Hamer Role</td>
+    <td>20 jan 1998</td>
+    <td>Theodore Lowe
+        Ap #867-859 Sit Rd.
+        Azusa New York 39531
+        (793) 151-6230</td>
+    
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Harry Styles</td>
+    <td>20 jan 1998</td>
+    <td>Forrest Ray
+        191-103 Integer Rd.
+        Corona New Mexico 08219
+        (404) 960-3807</td>
+    
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Louise Tomilson</td>
+    <td>20 jan 1998</td>
+    <td>Aaron Hawkins
+        5587 Nunc. Avenue
+        Erie Rhode Island 24975
+        (660) 663-4518</td>
+    
+  </tr>
+  
+</table>
+</div>
+</table>
+</body>
+</html> -->
+
+
+<h1>Customer Details</h1>
+
+<table id="customers" >
+  <tr>
+    <th>Customer_Id</th>
+    <th>Customer_Name</th>
+    <th>DOB</th>
+    <th>PhoneNo</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Update Customer</th>
+   
+    <th>Delete Customer</th>
+  </tr>
+  <tr *ngFor="let customerData of customersDetails">
+    <td>{{customerData.CustomerId}}</td>
+    <td>{{customerData.CustomerName}}</td>
+    <td>{{customerData.DOB}}</td>
+    <td>{{customerData.PhoneNo}}</td>
+    <td>{{customerData.Email}}</td>
+    <td>{{customerData.Address}}</td>
+    <td><button (click) = "GetCustomerDetailsById(customerData.CustomerId)" class="btn btn-secondary" >Update</button></td>
+    <!-- <td><button (click)="ViewCustomer(customerData.CustomerId)" class="btn btn-info">View</button></td> -->
+    <td><button (click) = "DeleteCustomerDetails(customerData.CustomerId)" class="btn btn-danger">Delete</button></td>
+  </tr>
+  
+</table>
+<br><br>
+
+<div class="center">
+  <label>Customer ID</label>
+  <input [disabled] = "isDisabledId" [(ngModel)] = "customerId" (change) = "onCustomerIdValueChanged($event)"  type="text" name="customerId" id="" class="form-control">
+  <label>Customer Name</label>
+  <input [disabled] = "isDisabledButton" [(ngModel)] = "customerName" (change) = "onCustomerNameValueChanged($event)" type="text" name="customerName" id="" class="form-control">
+  <label>DOB</label>
+  <input [disabled] = "isDisabledButton"  [(ngModel)] = "dob" (change) = "onDOBValueChanged($event)" type="text" name="DOB" id="" class="form-control">
+  <label>PhoneNo</label>
+  <input [disabled] = "isDisabledButton"  [(ngModel)] = "phoneNo" (change) = "onPhoneNoValueChanged($event)" type="text" name="PhoneNo" id="" class="form-control">
+  <label>Email</label>
+  <input [disabled] = "isDisabledButton"  [(ngModel)] = "email" (change) = "onEmailValueChanged($event)" type="text" name="Email" id="" class="form-control">
+  <label>Address</label>
+  <input [disabled] = "isDisabledButton"  [(ngModel)] = "address" (change) = "onAddressValueChanged($event)" type="text" name="Address" id="" class="form-control">
+  <br>
+  <button  class="btn btn-primary" (click) = "InsertCustomerData()">Add Customer</button> &nbsp;
+  <button  (click) = "UpdateCustomerDetails(customerDetail)" class="btn btn-warning">Update Customer</button>
+</div>

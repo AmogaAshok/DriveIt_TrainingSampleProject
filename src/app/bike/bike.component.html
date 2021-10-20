@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html style="width: 1510px;height: 720px;">
+<title layout="row" layout-align="center center">DriveIt</title>
+<!-- <nav><app-header></app-header></nav> -->
+<body background="assets\img\bg.jpeg">
+<table style="padding-top:20px"> 
+    <a class="two" routerLinkActive = "active" routerLink="/Car">Show Cars</a>
+<caption> <h1 style="color:black; font-size: 40px;padding-top: 20px;"><b>Currently available bikes</b></h1> </caption>
+<ng-template [ngIf]="Isdisabled1"><div>
+   
+ <input {{BikeName}} type="text"  class="form-control"> 
+
+</div></ng-template>
+
+<tr >  
+    <td style="padding-left:70px;">    
+        <caption style="padding-left: 40px;padding-bottom:15px;font-size:30px;color: brown;"><b>KTM390</b></caption> 
+        <img src="assets\img\b1.jpeg"  height="200"> 
+        <p layout="row" layout-align="center center"  Hyndai Tuscon ></p>
+        <div layout-align=center center>  Price : ₹22.3 lakhs 
+        <p> <button> Add to cart </button> <button> Buy </button>    <button >View</button></p> 
+        </div>
+    </td>
+    <td style="padding-left:70px;">
+        <caption style="padding-left: 40px;padding-bottom:15px;font-size:30px;color: brown;"><b>Ninja500</b></caption> 
+        <img src="assets\img\b2.jpeg"  height="200"> 
+        <p layout="row" layout-align="center center"  Hyndai Tuscon ></p>
+        <div layout-align=center center>  Price : ₹22.3 lakhs 
+        <p> <button> Add to cart </button> <button> Buy </button><button >View</button>  </p> 
+        
+        </div>
+    </td>
+    <td style="padding-left:70px;">   
+        <caption style="padding-left: 40px;padding-bottom:15px;font-size:30px;color: brown;"><b>RoyalEnfield</b></caption>   
+        <img src="assets\img\b3.jpeg"  height="200"> 
+        <p layout="row" layout-align="center center"  Hyndai Tuscon ></p>
+        <div layout-align=center center>  Price : ₹22.3 lakhs 
+        <p> <button> Add to cart </button> <button> Buy </button> <button >View</button> </p> 
+        
+        </div>
+    </td>
+</tr>
+<tr>
+    <td style="padding-left:70px;">   
+        <caption style="padding-left: 40px;padding-bottom:15px;font-size:30px;color: brown;"><b>R15V3</b></caption>   
+        <img src="assets\img\b4.jpeg"  height="200"> 
+        <p layout="row" layout-align="center center"  Hyndai Tuscon ></p>
+        <div layout-align=center center>  Price : ₹22.3 lakhs 
+        <p> <button> Add to cart </button> <button> Buy </button> <button >View</button> </p> 
+        
+        </div>
+    </td>
+    <td style="padding-left:70px;">     
+        <caption style="padding-left: 40px;padding-bottom:15px;font-size:30px;color: brown;"><b>Dominar400</b></caption> 
+        <img src="assets\img\b5.jpeg"  height="200"> 
+        <p layout="row" layout-align="center center"  Hyndai Tuscon ></p>
+        <div layout-align=center center>  Price : ₹22.3 lakhs 
+        <p> <button> Add to cart </button> <button> Buy </button> <button>View</button> </p> 
+        
+        </div>
+    <td style="padding-left:70px;">    
+        <caption style="padding-left: 40px;padding-bottom:15px;font-size:30px;color: brown;"><b>Pulser220</b></caption>  
+        <img src="assets\img\b6.jpeg"  height="200"> 
+        <p layout="row" layout-align="center center"  Hyndai Tuscon ></p>
+        <div layout-align=center center>  Price : ₹22.3 lakhs 
+        <p> <button> Add to cart </button> <button> Buy  </button><button>View </button>  </p> 
+       
+        </div>
+    </td>
+
+</tr>
+</table>
+</body>
+</html>

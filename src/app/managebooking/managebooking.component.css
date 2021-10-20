@@ -1,0 +1,87 @@
+/* .center{
+    margin-left: auto;
+    margin-right: auto;
+} 
+.navbar{
+  background-color: rgb(5, 5, 7);
+  padding-bottom: 100px;
+}
+
+  
+
+  #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  */
+
+  .center{
+    margin-left: auto;
+    margin-right: auto;
+} 
+.navbar{
+  background-color: rgb(5, 5, 7);
+  padding-bottom: 100px;
+}
+
+  
+
+  #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  #customers tr:nth-child(odd){background-color: #f2f2f2;}
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .bg{
+    width: 100vw;
+    height: 100vh; 
+    background-image: url("/assets/img/2014_bmw_m4_coupe-2560x1600.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+
+  
+      table,
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }

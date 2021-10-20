@@ -1,0 +1,46 @@
+<!-- <!DOCTYPE html>
+<html >
+<body  background="assets\img\2014_bmw_m4_coupe-2560x1600.jpg" > 
+<div id="customers">
+<div >
+  <a ><h2>Insert Bookings</h2></a>
+</div>
+
+<div id="customers" >
+  <label>Customer ID</label> 
+  <input  [(ngModel)] = "customerId" (change) = "onCustomerNameValueChanged($event)" type="text" name="customerId" id="" class="form-control">
+  <label>Vehicle ID</label>
+  <input [(ngModel)] = "vehicleId" (change) = 
+  "onCityValueChanged($event)" type="text" name="vehicleId" id="" class="form-control">
+  <br>
+   <label >Booking Date</label>
+  <input  [(ngModel)] = "bookingDate" (change) = "onGradeValueChanged($event)" type="text" name="bookingDate" id="" class="form-control"> 
+  <br>
+  <button class="btn btn-primary"  (click) = "InsertBookingDetails()" >Add</button> &nbsp;
+</div>
+</div>
+
+</body>
+</html> -->
+<style>
+  .blue {
+    color: #ffffff;
+  }
+</style>
+<div class="bg">
+<h2 class="text-center">Insert Bookings</h2>
+
+<div class=" container col-md-6 col-sm-4">
+ 
+  <label>Customer ID</label> 
+  <input  [(ngModel)] = "customerId" (change) = "onCustomerNameValueChanged($event)" type="text" name="customerId" id="" class="form-control">
+  <label>Vehicle ID</label>
+  <input [(ngModel)] = "vehicleId" (change) = 
+  "onCityValueChanged($event)" type="text" name="vehicleId" id="" class="form-control">
+  <br>
+   <label class="blue">Booking Date</label>
+  <input  [(ngModel)] = "bookingDate" (change) = "onGradeValueChanged($event)" type="text" name="bookingDate" id="" class="form-control"> 
+  <br>
+  <button class="btn btn-primary"  (click) = "InsertBookingDetails()" >Add</button> &nbsp;
+  </div>
+</div>
